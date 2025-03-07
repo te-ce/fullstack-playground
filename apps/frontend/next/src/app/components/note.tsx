@@ -1,5 +1,5 @@
 "use client";
-import { Note as NoteProp } from "@/schemas/note";
+import { Note as NoteProp } from "common/schemas";
 import { useNotesStore } from "../../stores/notesStore";
 
 export const Note = ({ note }: { note: NoteProp }) => {

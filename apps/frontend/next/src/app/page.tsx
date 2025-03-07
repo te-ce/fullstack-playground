@@ -3,8 +3,8 @@ import { NoteForm } from "./components/noteForm";
 import { Notes } from "./components/notes";
 import db from "../utils/firestore";
 import { collection, getDocs } from "firebase/firestore";
-import { notesSchema } from "@/schemas/note";
 import { Footer } from "./components/footer";
+import { notesSchema } from "common/schemas";
 
 export default async function Home() {
   const querySnapshot = await getDocs(collection(db, "notes"));

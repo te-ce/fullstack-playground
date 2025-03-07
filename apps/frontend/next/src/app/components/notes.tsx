@@ -1,11 +1,11 @@
 "use client";
 
-import { Note as NoteProp } from "@/schemas/note";
+import { Note as NoteProps } from "common/schemas";
 import { useNotesStore } from "../../stores/notesStore";
 import { useEffect } from "react";
 import { Note } from "./note";
 
-export const Notes = ({ notes }: { notes?: NoteProp[] }) => {
+export const Notes = ({ notes }: { notes?: NoteProps[] }) => {
   const notesStore = useNotesStore((state) => state.notes);
   const add = useNotesStore((state) => state.add);
 

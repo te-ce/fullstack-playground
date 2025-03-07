@@ -1,6 +1,9 @@
-const n = (e) => e == null, s = (e) => e && typeof e == "object", o = (e) => n(e) || Array.isArray(e) && e.length === 0 || s(e) && Object.keys(e).length === 0 || typeof e == "string" && e.trim().length === 0;
+import { n as o, a as s } from "./notes-DFX5nI2M.js";
+import { isBlank as m, isEmpty as n, isObject as r } from "./helpers/index.js";
 export {
-  o as isBlank,
+  m as isBlank,
   n as isEmpty,
-  s as isObject
+  r as isObject,
+  o as noteSchema,
+  s as notesSchema
 };
