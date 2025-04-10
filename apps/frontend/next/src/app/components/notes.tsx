@@ -16,10 +16,10 @@ export const Notes = ({ notes }: { notes?: NoteProps[] }) => {
   }, [notes, add]);
 
   return (
-    <>
+    <data className="grid grid-cols-1 gap-10 md:grid-cols-3">
       {notesStore.map((note, index) => (
-        <Note key={index} note={note} />
+        <Note key={`${note.id}${index}`} note={note} />
       ))}
-    </>
+    </data>
   );
 };

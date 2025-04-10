@@ -16,14 +16,12 @@
     "tsc:lint": "tsc --noemit"
   },
   "dependencies": {
-    "@firebase/firestore": "^4.7.7",
-    "firebase": "^11.3.0",
+    "common": "workspace:*",
     "next": "15.1.7",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "zod": "^3.24.1",
-    "zustand": "^5.0.3",
-    "common": "workspace:*"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -33,6 +31,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.7",
+    "eslint-config-prettier": "^10.0.1",
     "postcss": "^8",
     "prettier": "^3.5.0",
     "prettier-plugin-tailwindcss": "^0.6.11",

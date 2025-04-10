@@ -6,7 +6,7 @@ export const Note = ({ note }: { note: NoteProp }) => {
   const deleteNote = useNotesStore((state) => state.delete);
 
   return (
-    <div className="flex min-w-52 max-w-96 flex-col items-start justify-center rounded-lg border border-cyan-900 bg-neutral-900 p-4 shadow-lg shadow-cyan-500/50">
+    <div className="flex h-fit min-w-52 max-w-96 flex-col items-start justify-start rounded-lg border border-cyan-900 bg-neutral-900 p-4 shadow-lg shadow-cyan-500/50">
       <div className="flex w-full items-center justify-between pb-3 text-sm text-slate-600">
         <h2 className="font-light italic">{note.author}</h2>
         <button
