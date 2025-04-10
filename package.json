@@ -12,7 +12,8 @@
     "common": "pnpm --filter common",
     "fe:react": "pnpm --filter react-frontend",
     "be:hono": "pnpm --filter hono-backend",
-    "fe:next": "pnpm --filter next-frontend"
+    "fe:next": "pnpm --filter next-frontend",
+    "cli": "tsx cli.ts"
   },
   "lint-staged": {
     "**/*.{js,ts,tsx}": [
@@ -35,6 +36,7 @@
     "@commitlint/config-conventional": "^19.7.1",
     "@eslint/js": "^9.21.0",
     "@next/eslint-plugin-next": "^15.3.0",
+    "concurrently": "^9.1.2",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-prettier": "^5.2.3",
@@ -46,6 +48,10 @@
     "prettier": "^3.5.1",
     "prettier-edgejs": "^0.2.35",
     "prettier-plugin-tailwindcss": "^0.6.11",
+    "tsx": "^4.19.3",
     "typescript-eslint": "^8.24.1"
+  },
+  "dependencies": {
+    "prompts": "^2.4.2"
   }
 }
