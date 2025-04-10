@@ -3,9 +3,10 @@ import { NoteForm } from "./components/noteForm";
 import { Notes } from "./components/notes";
 import { Footer } from "./components/footer";
 import { notesSchema } from "common";
+import { BASE_DB_URI } from "@/util/variables";
 
 export default async function Home() {
-  const data = await fetch("http://localhost:3001/notes");
+  const data = await fetch(`${BASE_DB_URI}/notes`);
   const notes = notesSchema.parse(await data.json());
 
   return (
