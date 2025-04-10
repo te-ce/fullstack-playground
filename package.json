@@ -7,10 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "pnpm -r lint",
     "format": "prettier --write .",
+    "build": "pnpm common build",
     "prepare": "husky",
     "common": "pnpm --filter common",
     "fe:react": "pnpm --filter react-frontend",
-    "be:adonis": "pnpm --filter adonis-backend",
     "be:hono": "pnpm --filter hono-backend",
     "fe:next": "pnpm --filter next-frontend"
   },
@@ -23,7 +23,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.4.1",
+  "packageManager": "pnpm@10.8.0+sha256.29bf2c5ceaea7991ee82eec15fe7162e0fad816d0c4a6b35a16c01d39274bf69",
   "type": "module",
   "engines": {
     "node": ">=20.11.1"

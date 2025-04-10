@@ -1,4 +1,4 @@
-import { isBlank } from 'common';
+import { isBlank } from 'common/helpers';
 
 const App = () => {
   return (

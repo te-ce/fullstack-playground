@@ -1,8 +1,9 @@
 import { zValidator } from "@hono/zod-validator";
+import { notesSchema } from "common/schemas";
 import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { db } from "../index.js";
-import { notesSchema, notesTable } from "../schemas/notes.js";
+import { notesTable } from "../schemas/notes.js";
 
 const notes = new Hono();
 
