@@ -2,6 +2,14 @@
 
 This is a [pnpm](https://pnpm.io/) monorepo used as my playground to build and learn fullstack things.
 
+This is _NOT_ about getting the cleanest and most secure solution or the best UX/UI with the most awesome animations, this is about tip toeing into different technologies and learning their behavior.
+
+# Getting started
+
+It's as easy as `pnpm cli` and then choosing a backend and a frontend.
+
+# About
+
 ## Things I have done
 
 - Create a Monorepo using pnpm
@@ -9,10 +17,10 @@ This is a [pnpm](https://pnpm.io/) monorepo used as my playground to build and l
 - Create a backend API using hono
 - Form / API Validation using Zod
 - Work with a SQL Database (LibSQL, fork of SQLite) using Drizzle
+- Connect Frontend to Notes API, add Form to interact with Notes API
 
 ## Next Steps
 
-- Connect Frontend to Notes API, add Form to interact with Notes API
 - Add Authentication to Notes API
 - Build another Frontend using Astro
 - Build a Frontend just using Vanilla HTML + JS and build a Form for the Notes API

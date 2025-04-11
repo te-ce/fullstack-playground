@@ -7,7 +7,7 @@ import { Note } from "./note";
 
 export const Notes = ({ notes }: { notes?: NoteProps[] }) => {
   const notesStore = useNotesStore((state) => state.notes);
-  const add = useNotesStore((state) => state.add);
+  const add = useNotesStore((state) => state.create);
 
   useEffect(() => {
     if (notes) {

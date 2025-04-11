@@ -1,5 +1,5 @@
 import { zValidator } from "@hono/zod-validator";
-import { notesSchema } from "common/schemas";
+import { noteSchema, notesSchema } from "common/schemas";
 import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { db } from "../index.js";
@@ -8,13 +8,27 @@ import { notesTable } from "../schemas/notes.js";
 const notes = new Hono();
 
 notes.get("/", async (context) => {
-  return context.json(await db.select().from(notesTable));
+  const notes = await db.select().from(notesTable);
+  console.log("log: get all");
+  console.log(notes);
+  return context.json(notes);
 });
 
 notes.post("/", zValidator("form", notesSchema), async (context) => {
-  const validated = context.req.valid("form");
-  const result = await db.insert(notesTable).values(validated).execute();
+  const newNotes = context.req.valid("form");
+  const result = await db.insert(notesTable).values(newNotes).execute();
   return context.json(result, 201);
+});
+
+notes.put("/:id", zValidator("form", noteSchema), async (context) => {
+  const updatedNote = context.req.valid("form");
+  const id = context.req.param("id");
+  const result = await db
+    .update(notesTable)
+    .set(updatedNote)
+    .where(eq(notesTable.id, parseInt(id)))
+    .execute();
+  return context.json(result);
 });
 
 notes.get("/:id", async (context) => {

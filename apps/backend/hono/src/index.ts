@@ -2,6 +2,7 @@ import { serve } from "@hono/node-server";
 import { createClient } from "@libsql/client";
 import { drizzle } from "drizzle-orm/libsql";
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import notes from "./routes/notes.js";
 import "dotenv/config";
 
@@ -9,6 +10,12 @@ const client = createClient({ url: "file:local.db" });
 export const db = drizzle({ client });
 const app = new Hono();
 
+app.use(
+  "/notes/*",
+  cors({
+    origin: "http://localhost:3000",
+  }),
+);
 app.get("/", (c) => {
   return c.text("Hello Hono!");
 });
