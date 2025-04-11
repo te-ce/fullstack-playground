@@ -1,5 +1,5 @@
 import { zValidator } from "@hono/zod-validator";
-import { notesSchema } from "common/schemas";
+import { noteSchema, notesSchema } from "common/schemas";
 import { eq } from "drizzle-orm";
 import { Hono } from "hono";
 import { db } from "../index.js";
@@ -15,22 +15,29 @@ notes.get("/", async (context) => {
 });
 
 notes.post("/", zValidator("form", notesSchema), async (context) => {
-  console.log("log: post");
-  const validated = context.req.valid("form");
-  const result = await db.insert(notesTable).values(validated).execute();
+  const newNotes = context.req.valid("form");
+  const result = await db.insert(notesTable).values(newNotes).execute();
   return context.json(result, 201);
 });
 
+notes.put("/:id", zValidator("form", noteSchema), async (context) => {
+  const updatedNote = context.req.valid("form");
+  const id = context.req.param("id");
+  const result = await db
+    .update(notesTable)
+    .set(updatedNote)
+    .where(eq(notesTable.id, parseInt(id)))
+    .execute();
+  return context.json(result);
+});
+
 notes.get("/:id", async (context) => {
-  console.log("log: get id");
   const id = context.req.param("id");
   const result = await db
     .select()
     .from(notesTable)
     .where(eq(notesTable.id, parseInt(id)))
     .execute();
-
-  console.log(result);
   return context.json(result);
 });
 
@@ -40,7 +47,6 @@ notes.delete("/:id", async (context) => {
     .delete(notesTable)
     .where(eq(notesTable.id, parseInt(id)))
     .execute();
-  console.log(`log: delete ${parseInt(id)}`);
   return context.json(result);
 });
 
