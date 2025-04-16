@@ -77,10 +77,10 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^1.13.8
-        version: 1.13.8(hono@4.7.2)
+        version: 1.13.8(hono@4.7.7)
       '@hono/zod-validator':
         specifier: ^0.4.3
-        version: 0.4.3(hono@4.7.2)(zod@3.24.2)
+        version: 0.4.3(hono@4.7.7)(zod@3.24.2)
       '@libsql/client':
         specifier: ^0.14.0
         version: 0.14.0
@@ -103,8 +103,8 @@ importers:
         specifier: ^0.2.3
         version: 0.2.3(eslint@9.21.0(jiti@2.4.2))
       hono:
-        specifier: ^4.7.2
-        version: 4.7.2
+        specifier: ^4.7.7
+        version: 4.7.7
       pino:
         specifier: ^9.6.0
         version: 9.6.0
@@ -2898,8 +2898,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  hono@4.7.2:
-    resolution: {integrity: sha512-8V5XxoOF6SI12jkHkzX/6aLBMU5GEF5g387EjVSQipS0DlxWgWGSMeEayY3CRBjtTUQYwLHx9JYouWqKzy2Vng==}
+  hono@4.7.7:
+    resolution: {integrity: sha512-2PCpQRbN87Crty8/L/7akZN3UyZIAopSoRxCwRbJgUuV1+MHNFHzYFxZTg4v/03cXUm+jce/qa2VSBZpKBm3Qw==}
     engines: {node: '>=16.9.0'}
 
   hosted-git-info@2.8.9:
@@ -5204,13 +5204,13 @@ snapshots:
       - eslint-plugin-import
       - supports-color
 
-  '@hono/node-server@1.13.8(hono@4.7.2)':
+  '@hono/node-server@1.13.8(hono@4.7.7)':
     dependencies:
-      hono: 4.7.2
+      hono: 4.7.7
 
-  '@hono/zod-validator@0.4.3(hono@4.7.2)(zod@3.24.2)':
+  '@hono/zod-validator@0.4.3(hono@4.7.7)(zod@3.24.2)':
     dependencies:
-      hono: 4.7.2
+      hono: 4.7.7
       zod: 3.24.2
 
   '@humanfs/core@0.19.1': {}
@@ -7467,7 +7467,7 @@ snapshots:
 
   he@1.2.0: {}
 
-  hono@4.7.2: {}
+  hono@4.7.7: {}
 
   hosted-git-info@2.8.9: {}
 
