@@ -77,10 +77,10 @@ importers:
     dependencies:
       '@hono/node-server':
         specifier: ^1.13.8
-        version: 1.13.8(hono@4.7.2)
+        version: 1.13.8(hono@4.7.8)
       '@hono/zod-validator':
         specifier: ^0.4.3
-        version: 0.4.3(hono@4.7.2)(zod@3.24.2)
+        version: 0.4.3(hono@4.7.8)(zod@3.24.2)
       '@libsql/client':
         specifier: ^0.14.0
         version: 0.14.0
@@ -103,8 +103,8 @@ importers:
         specifier: ^0.2.3
         version: 0.2.3(eslint@9.21.0(jiti@2.4.2))
       hono:
-        specifier: ^4.7.2
-        version: 4.7.2
+        specifier: ^4.7.8
+        version: 4.7.8
       pino:
         specifier: ^9.6.0
         version: 9.6.0
@@ -2210,6 +2210,10 @@ packages:
     resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
 
+  detect-libc@2.0.4:
+    resolution: {integrity: sha512-3UDv+G9CsCKO1WKMGw9fwq/SWJYbI0c5Y7LU1AXYoDdbhE2AHQ6N6Nb34sG8Fj7T5APy8qXDCKuuIHd1BR0tVA==}
+    engines: {node: '>=8'}
+
   doctrine@2.1.0:
     resolution: {integrity: sha512-35mSku4ZXK0vfCuHEDAwt55dg2jNajHZ1odvF+8SSr82EsZY4QmXfuWso8oEd8zRhVObSN18aM0CjSdoBX7zIw==}
     engines: {node: '>=0.10.0'}
@@ -2898,8 +2902,8 @@ packages:
     resolution: {integrity: sha512-F/1DnUGPopORZi0ni+CvrCgHQ5FyEAHRLSApuYWMmrbSwoN2Mn/7k+Gl38gJnR7yyDZk6WLXwiGod1JOWNDKGw==}
     hasBin: true
 
-  hono@4.7.2:
-    resolution: {integrity: sha512-8V5XxoOF6SI12jkHkzX/6aLBMU5GEF5g387EjVSQipS0DlxWgWGSMeEayY3CRBjtTUQYwLHx9JYouWqKzy2Vng==}
+  hono@4.7.8:
+    resolution: {integrity: sha512-PCibtFdxa7/Ldud9yddl1G81GjYaeMYYTq4ywSaNsYbB1Lug4mwtOMJf2WXykL0pntYwmpRJeOI3NmoDgD+Jxw==}
     engines: {node: '>=16.9.0'}
 
   hosted-git-info@2.8.9:
@@ -3495,6 +3499,7 @@ packages:
   node-domexception@1.0.0:
     resolution: {integrity: sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==}
     engines: {node: '>=10.5.0'}
+    deprecated: Use your platform's native DOMException instead
 
   node-fetch@3.3.2:
     resolution: {integrity: sha512-dRB78srN/l6gqWulah9SrxeYnxeddIG30+GOqK/9OlLVyLg3HPnr6SqOWTWOXKRwC2eGYCkZ59NNuSgvSrpgOA==}
@@ -5204,13 +5209,13 @@ snapshots:
       - eslint-plugin-import
       - supports-color
 
-  '@hono/node-server@1.13.8(hono@4.7.2)':
+  '@hono/node-server@1.13.8(hono@4.7.8)':
     dependencies:
-      hono: 4.7.2
+      hono: 4.7.8
 
-  '@hono/zod-validator@0.4.3(hono@4.7.2)(zod@3.24.2)':
+  '@hono/zod-validator@0.4.3(hono@4.7.8)(zod@3.24.2)':
     dependencies:
-      hono: 4.7.2
+      hono: 4.7.8
       zod: 3.24.2
 
   '@humanfs/core@0.19.1': {}
@@ -6504,6 +6509,9 @@ snapshots:
   detect-libc@2.0.3:
     optional: true
 
+  detect-libc@2.0.4:
+    optional: true
+
   doctrine@2.1.0:
     dependencies:
       esutils: 2.0.3
@@ -7467,7 +7475,7 @@ snapshots:
 
   he@1.2.0: {}
 
-  hono@4.7.2: {}
+  hono@4.7.8: {}
 
   hosted-git-info@2.8.9: {}
 
@@ -8315,7 +8323,7 @@ snapshots:
 
   prebuild-install@7.1.3:
     dependencies:
-      detect-libc: 2.0.3
+      detect-libc: 2.0.4
       expand-template: 2.0.3
       github-from-package: 0.0.0
       minimist: 1.2.8
