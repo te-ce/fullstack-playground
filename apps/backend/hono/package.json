@@ -14,7 +14,7 @@
     "@typescript-eslint/eslint-plugin": "^8.26.0",
     "@typescript-eslint/parser": "^8.26.0",
     "dotenv": "^16.4.7",
-    "drizzle-orm": "^0.40.0",
+    "drizzle-orm": "^0.44.0",
     "eslint-plugin-drizzle": "^0.2.3",
     "hono": "^4.7.2",
     "pino": "^9.6.0",
