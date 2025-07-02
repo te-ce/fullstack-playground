@@ -13,7 +13,7 @@
     "@libsql/client": "^0.14.0",
     "@typescript-eslint/eslint-plugin": "^8.26.0",
     "@typescript-eslint/parser": "^8.26.0",
-    "dotenv": "^16.4.7",
+    "dotenv": "^17.0.1",
     "drizzle-orm": "^0.40.0",
     "eslint-plugin-drizzle": "^0.2.3",
     "hono": "^4.7.2",
