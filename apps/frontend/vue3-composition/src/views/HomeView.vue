@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import Header from '../components/NoteHeader.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
+  <main class="flex flex-col items-center justify-center h-screen bg-zinc-900 text-white">
+    <Header />
   </main>
 </template>
