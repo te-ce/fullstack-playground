@@ -2,7 +2,7 @@ import prompts from 'prompts';
 import { exec } from 'child_process';
 
 const backends = ['hono'];
-const frontends = ['next', 'react'];
+const frontends = ['next', 'vue3', 'react'];
 
 async function main() {
   const { backend } = await prompts({

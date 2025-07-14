@@ -13,6 +13,7 @@
     "fe:react": "pnpm --filter react-frontend",
     "be:hono": "pnpm --filter hono-backend",
     "fe:next": "pnpm --filter next-frontend",
+    "fe:vue3": "pnpm --filter vue3-composition",
     "cli": "tsx cli.ts"
   },
   "lint-staged": {
@@ -32,8 +33,6 @@
   "devDependencies": {
     "@adonisjs/eslint-config": "^2.0.0",
     "@adonisjs/prettier-config": "github:adonisjs/prettier-config",
-    "@commitlint/cli": "^19.7.1",
-    "@commitlint/config-conventional": "^19.7.1",
     "@eslint/js": "^9.21.0",
     "@next/eslint-plugin-next": "^15.3.0",
     "concurrently": "^9.1.2",
