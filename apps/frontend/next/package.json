@@ -24,6 +24,7 @@
     "zustand": "^5.0.3"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4",
     "@eslint/eslintrc": "^3",
     "@faker-js/faker": "^9.5.1",
     "@redux-devtools/extension": "^3.3.0",
